@@ -1,0 +1,1 @@
+docker run -ti --rm  -v $(pwd):/project riscduino/openlane:mpw7  sh -c "cd /project && ./run.sh | tee output/24-pdn.log"
