@@ -1,1 +1,2 @@
-docker run -ti --rm  -v $(pwd):/project riscduino/openlane:mpw7  sh -c "cd /project && ./run.sh | tee output/24-pdn.log"
+mkdir -p outputs reports
+docker run -ti --rm  -v $(pwd):/project riscduino/openlane:mpw7  sh -c "cd /project && ./run.sh dac_top "
