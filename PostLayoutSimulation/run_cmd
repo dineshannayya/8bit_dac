@@ -1,0 +1,1 @@
+magic  -noconsole -dnull -T $PDK_ROOT/sky130B/libs.tech/magic/sky130B.tech -rc $PDK_ROOT/sky130B/libs.tech/magic/sky130B.magicrc extract_spice.tcl

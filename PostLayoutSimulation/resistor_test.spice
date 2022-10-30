@@ -1,0 +1,22 @@
+* SPICE3 file created from resistor.ext - technology: sky130B
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+.subckt resistor b a
+X0 a b VSUBS sky130_fd_pr__res_generic_nd w=160000u l=820000u
+.ends
+
+Xsub1 a b resistor
+
+Va a 0 dc 3.3
+Vb b 0 dc 0
+
+.tran 0.1us 10us
+
+.control
+run
+plot V(a)/(-Va#branch)
+.endc
+
+.end
+

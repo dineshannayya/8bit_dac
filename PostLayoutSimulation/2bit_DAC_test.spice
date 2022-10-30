@@ -1,0 +1,65 @@
+* SPICE3 file created from 2bit_DAC.ext - technology: sky130B
+
+.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+
+.subckt switch2n vrefh0 vrefl0 vrefh1 D0_INV vrefl1 D0_BUF Vout0 Vout1 D0 vdd gnd
+X0 vrefh0 D0_BUF Vout0 gnd sky130_fd_pr__nfet_01v8 ad=2.058e+11p pd=1.82e+06u as=3.696e+11p ps=3.44e+06u w=420000u l=500000u
+X1 D0_BUF D0_INV vdd vdd sky130_fd_pr__pfet_01v8 ad=4.2e+11p pd=2.84e+06u as=8.8e+11p ps=5.76e+06u w=1e+06u l=500000u
+X2 Vout1 D0_INV vrefl1 gnd sky130_fd_pr__nfet_01v8 ad=3.696e+11p pd=3.44e+06u as=2.058e+11p ps=1.82e+06u w=420000u l=500000u
+X3 D0_INV D0 vdd vdd sky130_fd_pr__pfet_01v8 ad=4.2e+11p pd=2.84e+06u as=0p ps=0u w=1e+06u l=500000u
+X4 D0_BUF D0_INV gnd gnd sky130_fd_pr__nfet_01v8 ad=1.848e+11p pd=1.72e+06u as=4.116e+11p ps=3.64e+06u w=420000u l=500000u
+X5 D0_INV D0 gnd gnd sky130_fd_pr__nfet_01v8 ad=1.848e+11p pd=1.72e+06u as=0p ps=0u w=420000u l=500000u
+X6 vrefl0 D0_BUF Vout0 vdd sky130_fd_pr__pfet_01v8 ad=4.431e+11p pd=2.9e+06u as=8.4e+11p ps=5.68e+06u w=1e+06u l=500000u
+X7 Vout0 D0_INV vrefh0 vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=4.4e+11p ps=2.88e+06u w=1e+06u l=500000u
+X8 Vout1 D0_INV vrefh1 vdd sky130_fd_pr__pfet_01v8 ad=8.4e+11p pd=5.68e+06u as=4.4e+11p ps=2.88e+06u w=1e+06u l=500000u
+X9 vrefh1 D0_BUF Vout1 gnd sky130_fd_pr__nfet_01v8 ad=2.058e+11p pd=1.82e+06u as=0p ps=0u w=420000u l=500000u
+X10 Vout0 D0_INV vrefl0 gnd sky130_fd_pr__nfet_01v8 ad=0p pd=0u as=2.058e+11p ps=1.82e+06u w=420000u l=500000u
+X11 vrefl1 D0_BUF Vout1 vdd sky130_fd_pr__pfet_01v8 ad=4.431e+11p pd=2.9e+06u as=0p ps=0u w=1e+06u l=500000u
+.ends
+
+.subckt resistor b a VSUBS
+X0 a b VSUBS sky130_fd_pr__res_generic_nd w=160000u l=820000u
+.ends
+
+.subckt resistor_3xh RH1 RL1 RH0 RL0 VSUBS
+Xresistor_0 RL0 RH0 VSUBS resistor
+Xresistor_1 RL1 RH1 VSUBS resistor
+Xresistor_2 RH0 RL1 VSUBS resistor
+.ends
+
+.subckt switch2 vrefl vrefh Vout D1_INV D1_BUF D1 vdd gnd
+X0 D1_INV D1 gnd gnd sky130_fd_pr__nfet_01v8 ad=1.848e+11p pd=1.72e+06u as=4.116e+11p ps=3.64e+06u w=420000u l=500000u
+X1 Vout D1_INV vrefl gnd sky130_fd_pr__nfet_01v8 ad=3.696e+11p pd=3.44e+06u as=2.058e+11p ps=1.82e+06u w=420000u l=500000u
+X2 D1_BUF D1_INV gnd gnd sky130_fd_pr__nfet_01v8 ad=1.848e+11p pd=1.72e+06u as=0p ps=0u w=420000u l=500000u
+X3 vrefh D1_BUF Vout gnd sky130_fd_pr__nfet_01v8 ad=2.058e+11p pd=1.82e+06u as=0p ps=0u w=420000u l=500000u
+X4 D1_INV D1 vdd vdd sky130_fd_pr__pfet_01v8 ad=4.2e+11p pd=2.84e+06u as=8.8e+11p ps=5.76e+06u w=1e+06u l=500000u
+X5 D1_BUF D1_INV vdd vdd sky130_fd_pr__pfet_01v8 ad=4.2e+11p pd=2.84e+06u as=0p ps=0u w=1e+06u l=500000u
+X6 vrefl D1_BUF Vout vdd sky130_fd_pr__pfet_01v8 ad=4.431e+11p pd=2.9e+06u as=8.4e+11p ps=5.68e+06u w=1e+06u l=500000u
+X7 Vout D1_INV vrefh vdd sky130_fd_pr__pfet_01v8 ad=0p pd=0u as=4.4e+11p ps=2.88e+06u w=1e+06u l=500000u
+.ends
+
+.subckt x2bit_DAC Vrefl Vrefh Vout D0_BUF D0 D1 D1_BUF gnd vdd
+Xswitch2n_0 Vrefh switch2n_0/vrefl0 switch2n_0/vrefh1 switch2n_0/D0_INV Vrefl D0_BUF
++ switch2_0/vrefh switch2_0/vrefl D0 vdd gnd switch2n
+Xresistor_3xh_0 Vrefh switch2n_0/vrefl0 switch2n_0/vrefh1 Vrefl gnd resistor_3xh
+Xswitch2_0 switch2_0/vrefl switch2_0/vrefh Vout switch2_0/D1_INV D1_BUF D1 vdd gnd
++ switch2
+.ends
+
+
+
+Xsub1 Vrefl Vrefh Vout D0_BUF D0 D1 D1_BUF gnd vdd x2bit_DAC
+
+
+Vdd vdd 0 dc 3.3
+Vin1 Vrefl 0 dc 0.0
+Vin2 Vrefh 0 dc 3.3
+Vd0 D0 0 pulse(0 1.8 0ns 0.1ns 0.1ns 10us 20us)
+Vd1 D1 0 pulse(0 1.8 0ns 0.1ns 0.1ns 20us 40us)
+
+.tran 1us 100us
+.control
+run
+plot V(Vout) V(D0) V(D1) 
+.endc
+.end
