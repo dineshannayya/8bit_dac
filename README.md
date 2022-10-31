@@ -29,6 +29,63 @@
      git clone https://github.com/google/skywater-pdk-libs-sky130_fd_pr
 ```
 
+# Post Layout Simulation
+```bash
+   ngspice resistor_test.spice
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/resistor.png" ></td> </tr> </table>
+
+```bash
+   ngspice switch_test.spice
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/switch.png" ></td> </tr> </table>
+
+```bash
+   ngspice switch2_test.spice
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/switch2.png" ></td> </tr> </table>
+
+
+```bash
+   ngspice switch2n_test.spice
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/switch2n.png" ></td> </tr> </table>
+
+```bash
+   ngspice 2bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/2bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 3bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/3bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 4bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/4bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 5bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/5bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 6bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/6bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 7bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/7bit_DAC.png" ></td> </tr> </table>
+
+```bash
+   ngspice 8bit_DAC_test.spice 
+```
+   <table> <tr> <td  align="center"><img src="./docs/source/_static/8bit_DAC.png" ></td> </tr> </table>
+
 # Reference
 Basic idea and register and switch picked from 
 * **avsddac_3v3_sky130_v2 Aim** - https://github.com/vsdip/avsddac_3v3_sky130_v2
