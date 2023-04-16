@@ -27,6 +27,25 @@
 
    #Step-4: To clone the Skywater PDK Library for ngsim
      git clone https://github.com/google/skywater-pdk-libs-sky130_fd_pr
+
+   #Step-5: Install the ESim
+     https://esim.fossee.in/downloads
+     https://static.fossee.in/esim/installation-files/eSim-2.3.zip
+     unzip eSim-2.3.zip
+     cd eSim-2.3
+     chmod +x install-eSim.sh
+     sudo /install-eSim.sh --install
+```
+# Extract Spice
+```bash
+   cd PostLayoutSimulation
+   ./run_extract_spice
+```
+
+# Run the Klayout FEOL/BEOL/Density/Zero Area/overlapping check
+```bash
+   cd PostLayout
+   ./run_precheck
 ```
 
 # Post Layout Simulation
