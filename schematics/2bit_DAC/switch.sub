@@ -1,0 +1,14 @@
+* Subcircuit switch
+.lib "../../sky130_fd_pr/models/sky130.lib.spice" tt
+.subckt switch vdd digital_input vrefh vrefl vout 
+m6  net-_m5-pad1_ net-_m1-pad1_ vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+m5  net-_m5-pad1_ net-_m1-pad1_ gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.5
+m2  net-_m1-pad1_ digital_input vdd vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+m1  net-_m1-pad1_ digital_input gnd gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.5
+m3  vout net-_m1-pad1_ vrefl gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.5
+m4  vout net-_m1-pad1_ vrefh vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+m8  vrefh net-_m5-pad1_ vout gnd sky130_fd_pr__nfet_01v8 w=0.42 l=0.5
+m7  vrefl net-_m5-pad1_ vout vdd sky130_fd_pr__pfet_01v8 w=1 l=0.5
+* Control Statements
+
+.ends switch

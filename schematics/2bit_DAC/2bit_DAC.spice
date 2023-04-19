@@ -1,0 +1,27 @@
+* D:\vlsi\github\8bit_dac\schematics\2bit_DAC\2bit_DAC.cir
+
+.include switch.sub
+R4  Net-_R3-Pad2_ vrefl 250		
+R3  Net-_R2-Pad2_ Net-_R3-Pad2_ 250		
+R2  Net-_R1-Pad2_ Net-_R2-Pad2_ 250		
+R1  vrefh Net-_R1-Pad2_ 250		
+S2  vdd d0 Net-_R3-Pad2_ vrefl Net1 switch		
+S1  vdd d0 Net-_R1-Pad2_ Net-_R2-Pad2_ Net2 switch		
+S3  vdd d1 Net1 Net2 vout switch		
+
+Vdd vdd 0 3.3
+Vrefh vrefh 0 3.3
+Vrefl vrefl 0 0.0
+Vd0 d0 0 pulse(0 1.8 0s 0s 5us 10us)
+Vd1 d1 0 pulse(0 1.8 0s 0s 10us 20us)
+
+.tran 0.1us 20us
+
+.control
+run
+
+plot V(d0) V(d1) v(vout)
+
+.endc
+
+.end
