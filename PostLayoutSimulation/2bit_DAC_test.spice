@@ -1,6 +1,6 @@
 * SPICE3 file created from 2bit_DAC.ext - technology: sky130B
 
-.lib "sky130_fd_pr/models/sky130.lib.spice" tt
+.lib "../sky130_fd_pr/models/sky130.lib.spice" tt
 
 .subckt switch2n vrefh0 vrefl0 vrefh1 D0_INV vrefl1 D0_BUF Vout0 Vout1 D0 vdd gnd
 X0 vrefh0 D0_BUF Vout0 gnd sky130_fd_pr__nfet_01v8 ad=2.058e+11p pd=1.82e+06u as=3.696e+11p ps=3.44e+06u w=420000u l=500000u
