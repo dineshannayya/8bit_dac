@@ -1,0 +1,27 @@
+* c:\fossee\esim\library\subcircuitlibrary\switch_2n\switch_2n.cir
+
+m6  /din_buf net-_m1-pad1_ /vdd /vdd mosfet_p
+m5  /din_buf net-_m1-pad1_ gnd gnd mosfet_n
+m2  net-_m1-pad1_ /din /vdd /vdd mosfet_p
+m1  net-_m1-pad1_ /din gnd gnd mosfet_n
+m3  /voutl net-_m1-pad1_ /vinl gnd mosfet_n
+m4  /voutl net-_m1-pad1_ /vin_1 /vdd mosfet_p
+m8  /vin_1 /din_buf /voutl gnd mosfet_n
+m7  /vinl /din_buf /voutl /vdd mosfet_p
+* u1  /vdd /din /vinl /vinh /voutl /vouth /din_buf port
+m10  /vouth net-_m1-pad1_ /vinh /vdd mosfet_p
+m11  /vin_2 /din_buf /vouth /vdd mosfet_p
+m9  /vouth net-_m1-pad1_ /vin_2 gnd mosfet_n
+m12  /vinh /din_buf /vouth gnd mosfet_n
+r1  /vinh /vin_2 resistor
+r2  /vin_2 /vin_1 resistor
+r3  /vin_1 /vinl resistor
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end

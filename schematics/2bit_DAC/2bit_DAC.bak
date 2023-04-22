@@ -1,0 +1,293 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+LIBS:eSim_Ngveri
+LIBS:eSim_SKY130
+LIBS:eSim_SKY130_Subckts
+LIBS:2bit_DAC-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L resistor R4
+U 1 1 643E4934
+P 3350 4400
+F 0 "R4" H 3400 4530 50  0000 C CNN
+F 1 "resistor" H 3400 4350 50  0000 C CNN
+F 2 "" H 3400 4380 30  0000 C CNN
+F 3 "" V 3400 4450 30  0000 C CNN
+	1    3350 4400
+	0    1    1    0   
+$EndComp
+$Comp
+L resistor R3
+U 1 1 643E4A02
+P 3350 3950
+F 0 "R3" H 3400 4080 50  0000 C CNN
+F 1 "resistor" H 3400 3900 50  0000 C CNN
+F 2 "" H 3400 3930 30  0000 C CNN
+F 3 "" V 3400 4000 30  0000 C CNN
+	1    3350 3950
+	0    1    1    0   
+$EndComp
+$Comp
+L resistor R2
+U 1 1 643E4A4B
+P 3350 3500
+F 0 "R2" H 3400 3630 50  0000 C CNN
+F 1 "resistor" H 3400 3450 50  0000 C CNN
+F 2 "" H 3400 3480 30  0000 C CNN
+F 3 "" V 3400 3550 30  0000 C CNN
+	1    3350 3500
+	0    1    1    0   
+$EndComp
+$Comp
+L resistor R1
+U 1 1 643E4A8A
+P 3350 3100
+F 0 "R1" H 3400 3230 50  0000 C CNN
+F 1 "resistor" H 3400 3050 50  0000 C CNN
+F 2 "" H 3400 3080 30  0000 C CNN
+F 3 "" V 3400 3150 30  0000 C CNN
+	1    3350 3100
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U1
+U 2 1 643E4B11
+P 3400 2600
+F 0 "U1" H 3450 2700 30  0000 C CNN
+F 1 "PORT" H 3400 2600 30  0000 C CNN
+F 2 "" H 3400 2600 60  0000 C CNN
+F 3 "" H 3400 2600 60  0000 C CNN
+	2    3400 2600
+	0    1    1    0   
+$EndComp
+$Comp
+L switch S2
+U 1 1 643E4B8C
+P 4650 4250
+F 0 "S2" H 4300 3950 60  0000 C CNN
+F 1 "switch" H 4900 3950 60  0000 C CNN
+F 2 "" H 4650 4250 60  0001 C CNN
+F 3 "" H 4650 4250 60  0001 C CNN
+	1    4650 4250
+	1    0    0    -1  
+$EndComp
+$Comp
+L switch S1
+U 1 1 643E4BCB
+P 4650 3000
+F 0 "S1" H 4300 2700 60  0000 C CNN
+F 1 "switch" H 4900 2700 60  0000 C CNN
+F 2 "" H 4650 3000 60  0001 C CNN
+F 3 "" H 4650 3000 60  0001 C CNN
+	1    4650 3000
+	1    0    0    -1  
+$EndComp
+$Comp
+L switch S3
+U 1 1 643E4C0E
+P 6350 3700
+F 0 "S3" H 6000 3400 60  0000 C CNN
+F 1 "switch" H 6600 3400 60  0000 C CNN
+F 2 "" H 6350 3700 60  0001 C CNN
+F 3 "" H 6350 3700 60  0001 C CNN
+	1    6350 3700
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U1
+U 1 1 643E4DEF
+P 5600 2000
+F 0 "U1" H 5650 2100 30  0000 C CNN
+F 1 "PORT" H 5600 2000 30  0000 C CNN
+F 2 "" H 5600 2000 60  0000 C CNN
+F 3 "" H 5600 2000 60  0000 C CNN
+	1    5600 2000
+	0    1    1    0   
+$EndComp
+Text Label 4000 2950 0    60   ~ 0
+d0
+$Comp
+L PORT U1
+U 5 1 643E5427
+P 5600 3400
+F 0 "U1" H 5650 3500 30  0000 C CNN
+F 1 "PORT" H 5600 3400 30  0000 C CNN
+F 2 "" H 5600 3400 60  0000 C CNN
+F 3 "" H 5600 3400 60  0000 C CNN
+	5    5600 3400
+	0    1    1    0   
+$EndComp
+Text Label 5650 3650 0    60   ~ 0
+d1
+$Comp
+L PORT U1
+U 4 1 643E550D
+P 3950 2650
+F 0 "U1" H 4000 2750 30  0000 C CNN
+F 1 "PORT" H 3950 2650 30  0000 C CNN
+F 2 "" H 3950 2650 60  0000 C CNN
+F 3 "" H 3950 2650 60  0000 C CNN
+	4    3950 2650
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U1
+U 6 1 643E58B3
+P 7250 3700
+F 0 "U1" H 7300 3800 30  0000 C CNN
+F 1 "PORT" H 7250 3700 30  0000 C CNN
+F 2 "" H 7250 3700 60  0000 C CNN
+F 3 "" H 7250 3700 60  0000 C CNN
+	6    7250 3700
+	-1   0    0    1   
+$EndComp
+Text Label 6900 3700 0    60   ~ 0
+vout
+$Comp
+L PORT U1
+U 3 1 643E5A6C
+P 3400 5100
+F 0 "U1" H 3450 5200 30  0000 C CNN
+F 1 "PORT" H 3400 5100 30  0000 C CNN
+F 2 "" H 3400 5100 60  0000 C CNN
+F 3 "" H 3400 5100 60  0000 C CNN
+	3    3400 5100
+	0    -1   -1   0   
+$EndComp
+Text Label 3400 4850 0    60   ~ 0
+vrefl
+Text Label 3400 2900 0    60   ~ 0
+vrefh
+Wire Wire Line
+	3400 3400 3400 3300
+Wire Wire Line
+	3400 3850 3400 3700
+Wire Wire Line
+	3400 4300 3400 4150
+Wire Wire Line
+	3400 4600 3400 4850
+Wire Wire Line
+	3400 2850 3400 3000
+Wire Wire Line
+	3400 3350 3800 3350
+Wire Wire Line
+	3800 3350 3800 2200
+Wire Wire Line
+	3800 2200 4600 2200
+Wire Wire Line
+	4600 2200 4600 2450
+Connection ~ 3400 3350
+Wire Wire Line
+	3400 3750 3800 3750
+Wire Wire Line
+	3800 3750 3800 3550
+Wire Wire Line
+	3800 3550 4600 3550
+Wire Wire Line
+	4600 3550 4600 3450
+Connection ~ 3400 3750
+Wire Wire Line
+	3400 4250 3850 4250
+Wire Wire Line
+	3850 4250 3850 3650
+Wire Wire Line
+	3850 3650 4600 3650
+Wire Wire Line
+	4600 3650 4600 3700
+Connection ~ 3400 4250
+Wire Wire Line
+	3400 4650 4150 4650
+Wire Wire Line
+	4150 4650 4150 4800
+Wire Wire Line
+	4150 4800 4600 4800
+Wire Wire Line
+	4600 4800 4600 4700
+Connection ~ 3400 4650
+Wire Wire Line
+	5200 3000 6300 3000
+Wire Wire Line
+	6300 3000 6300 3150
+Wire Wire Line
+	5200 4250 6300 4250
+Wire Wire Line
+	6300 4250 6300 4150
+Wire Wire Line
+	4800 2350 4800 2450
+Wire Wire Line
+	6500 2350 6500 3150
+Wire Wire Line
+	4800 3700 4800 3600
+Wire Wire Line
+	4800 3600 5450 3600
+Wire Wire Line
+	5450 3600 5450 2350
+Connection ~ 5450 2350
+Wire Wire Line
+	5600 2250 5600 2350
+Connection ~ 5600 2350
+Wire Wire Line
+	3950 2950 4050 2950
+Wire Wire Line
+	5600 3650 5750 3650
+Wire Wire Line
+	7000 3700 6900 3700
+Wire Wire Line
+	3950 2900 3950 4200
+Wire Wire Line
+	3950 4200 4050 4200
+Connection ~ 3950 2950
+Text Label 5600 2350 1    60   ~ 0
+vdd
+Wire Wire Line
+	4800 2350 6500 2350
+$EndSCHEMATC

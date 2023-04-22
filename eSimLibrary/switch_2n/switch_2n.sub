@@ -1,0 +1,21 @@
+* Subcircuit switch_2n
+.subckt switch_2n /vdd /din /vinl /vinh /voutl /vouth /din_buf 
+* c:\fossee\esim\library\subcircuitlibrary\switch_2n\switch_2n.cir
+m6  /din_buf net-_m1-pad1_ /vdd /vdd mosfet_p
+m5  /din_buf net-_m1-pad1_ gnd gnd mosfet_n
+m2  net-_m1-pad1_ /din /vdd /vdd mosfet_p
+m1  net-_m1-pad1_ /din gnd gnd mosfet_n
+m3  /voutl net-_m1-pad1_ /vinl gnd mosfet_n
+m4  /voutl net-_m1-pad1_ /vin_1 /vdd mosfet_p
+m8  /vin_1 /din_buf /voutl gnd mosfet_n
+m7  /vinl /din_buf /voutl /vdd mosfet_p
+m10  /vouth net-_m1-pad1_ /vinh /vdd mosfet_p
+m11  /vin_2 /din_buf /vouth /vdd mosfet_p
+m9  /vouth net-_m1-pad1_ /vin_2 gnd mosfet_n
+m12  /vinh /din_buf /vouth gnd mosfet_n
+r1  /vinh /vin_2 resistor
+r2  /vin_2 /vin_1 resistor
+r3  /vin_1 /vinl resistor
+* Control Statements
+
+.ends switch_2n

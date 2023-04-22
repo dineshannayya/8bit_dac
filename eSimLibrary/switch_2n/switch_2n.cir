@@ -1,0 +1,26 @@
+* C:\FOSSEE\eSim\library\SubcircuitLibrary\switch_2n\switch_2n.cir
+
+* EESchema Netlist Version 1.1 (Spice format) creation date: 04/22/23 11:00:55
+
+* To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
+* To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
+
+* Sheet Name: /
+M6  /din_buf Net-_M1-Pad1_ /vdd /vdd mosfet_p		
+M5  /din_buf Net-_M1-Pad1_ GND GND mosfet_n		
+M2  Net-_M1-Pad1_ /din /vdd /vdd mosfet_p		
+M1  Net-_M1-Pad1_ /din GND GND mosfet_n		
+M3  /voutl Net-_M1-Pad1_ /vinl GND mosfet_n		
+M4  /voutl Net-_M1-Pad1_ /vin_1 /vdd mosfet_p		
+M8  /vin_1 /din_buf /voutl GND mosfet_n		
+M7  /vinl /din_buf /voutl /vdd mosfet_p		
+U1  /vdd /din /vinl /vinh /voutl /vouth /din_buf PORT		
+M10  /vouth Net-_M1-Pad1_ /vinh /vdd mosfet_p		
+M11  /vin_2 /din_buf /vouth /vdd mosfet_p		
+M9  /vouth Net-_M1-Pad1_ /vin_2 GND mosfet_n		
+M12  /vinh /din_buf /vouth GND mosfet_n		
+R1  /vinh /vin_2 resistor		
+R2  /vin_2 /vin_1 resistor		
+R3  /vin_1 /vinl resistor		
+
+.end

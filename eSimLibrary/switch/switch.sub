@@ -1,0 +1,14 @@
+* Subcircuit switch
+.subckt switch /vdd /digital_input /vrefh /vrefl /vout 
+* c:\fossee\esim\library\subcircuitlibrary\switch\switch.cir
+m6  net-_m5-pad1_ net-_m1-pad1_ /vdd /vdd mosfet_p
+m5  net-_m5-pad1_ net-_m1-pad1_ gnd gnd mosfet_n
+m2  net-_m1-pad1_ /digital_input /vdd /vdd mosfet_p
+m1  net-_m1-pad1_ /digital_input gnd gnd mosfet_n
+m3  /vout net-_m1-pad1_ /vrefl gnd mosfet_n
+m4  /vout net-_m1-pad1_ /vrefh /vdd mosfet_p
+m8  /vrefh net-_m5-pad1_ /vout gnd mosfet_n
+m7  /vrefl net-_m5-pad1_ /vout /vdd mosfet_p
+* Control Statements
+
+.ends switch

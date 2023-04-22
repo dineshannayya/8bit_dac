@@ -1,0 +1,60 @@
+EESchema-LIBRARY Version 2.3
+#encoding utf-8
+#
+# eSim_R
+#
+DEF eSim_R R 0 0 N Y 1 F N
+F0 "R" 50 130 50 H V C CNN
+F1 "eSim_R" 50 -50 50 H V C CNN
+F2 "" 50 -20 30 H V C CNN
+F3 "" 50 50 30 V V C CNN
+ALIAS resistor
+$FPLIST
+ R_*
+ Resistor_*
+$ENDFPLIST
+DRAW
+S 150 10 -50 90 0 1 10 N
+X ~ 1 -100 50 50 R 60 60 1 1 P
+X ~ 2 200 50 50 L 60 60 1 1 P
+ENDDRAW
+ENDDEF
+#
+# switch
+#
+DEF switch S 0 40 Y Y 1 F N
+F0 "S" -350 -300 60 H V C CNN
+F1 "switch" 250 -300 60 H V C CNN
+F2 "" 0 0 60 H I C CNN
+F3 "" 0 0 60 H I C CNN
+DRAW
+S -400 350 350 -250 0 1 0 N
+X vdd 1 150 550 200 D 50 50 1 1 I
+X digital_input 2 -600 50 200 R 50 50 1 1 I
+X vrefh 3 -50 550 200 D 50 50 1 1 I
+X vrefl 4 -50 -450 200 U 50 50 1 1 I
+X Vout 5 550 0 200 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+# switch_2n
+#
+DEF switch_2n S 0 40 Y Y 1 F N
+F0 "S" 700 -850 60 H V C CNN
+F1 "switch_2n" -650 -850 60 H V C CNN
+F2 "" 100 200 60 H I C CNN
+F3 "" 100 200 60 H I C CNN
+DRAW
+S -750 650 800 -750 0 1 0 N
+S 1150 -1250 1150 -1250 0 1 0 N
+X vdd 1 450 850 200 D 50 50 1 1 I
+X din 2 -950 50 200 R 50 50 1 1 I
+X vinl 3 100 -950 200 U 50 50 1 1 I
+X vinh 4 100 850 200 D 50 50 1 1 I
+X voutl 5 1000 300 200 L 50 50 1 1 O
+X vouth 6 1000 -150 200 L 50 50 1 1 O
+X din_buf 7 1000 -650 200 L 50 50 1 1 O
+ENDDRAW
+ENDDEF
+#
+#End Library
