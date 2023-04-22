@@ -1,0 +1,15 @@
+* c:\fossee\esim\library\subcircuitlibrary\2bit_dac\2bit_dac.cir
+
+* u1  /vdd /d0 /d1 /vrefh /vrefl /vout net-_s1-pad7_ port
+r1  /vrefh net-_r1-pad2_ resistor
+s1  /vdd /d0 /vrefl net-_r1-pad2_ net-_s1-pad5_ net-_s1-pad6_ net-_s1-pad7_ switch_2n
+s2  /vdd /d1 net-_s1-pad6_ net-_s1-pad5_ /vout switch
+.tran 0e-00 0e-00 0e-00
+
+* Control Statements 
+.control
+run
+print allv > plot_data_v.txt
+print alli > plot_data_i.txt
+.endc
+.end
