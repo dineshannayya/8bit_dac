@@ -39,6 +39,7 @@ LIBS:eSim_Nghdl
 LIBS:eSim_Ngveri
 LIBS:eSim_SKY130
 LIBS:eSim_SKY130_Subckts
+LIBS:switch_2n-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -360,7 +361,7 @@ Wire Wire Line
 	5600 4150 5450 4150
 Connection ~ 5600 4150
 Text Label 2300 2450 0    60   ~ 0
-din
+Dx
 $Comp
 L mosfet_p M10
 U 1 1 64428D18
@@ -506,7 +507,7 @@ Connection ~ 8600 3350
 Text Label 8750 5350 0    60   ~ 0
 vinh_2
 Text Label 7900 3050 0    60   ~ 0
-din_buf
+Dx_buf
 $Comp
 L PORT U2
 U 3 1 6442A70A

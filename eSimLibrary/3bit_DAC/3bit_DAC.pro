@@ -1,4 +1,4 @@
-update=04/29/23 21:15:35
+update=04/30/23 20:35:48
 version=1
 last_client=eeschema
 [general]
@@ -29,7 +29,7 @@ version=1
 NetIExt=net
 [eeschema]
 version=1
-LibDir=
+LibDir=C:/FOSSEE/eSim/library/SubcircuitLibrary/2bit_DAC;C:/FOSSEE/eSim/library/SubcircuitLibrary/switch;C:/FOSSEE/eSim/library/SubcircuitLibrary/switch_2n
 [eeschema/libraries]
 LibName1=adc-dac
 LibName2=memory
@@ -71,4 +71,13 @@ LibName37=eSim_Nghdl
 LibName38=eSim_Ngveri
 LibName39=eSim_SKY130
 LibName40=eSim_SKY130_Subckts
-LibName41=2bit_DAC-cache
+[schematic_editor]
+version=1
+PageLayoutDescrFile=
+PlotDirectoryName=
+SubpartIdSeparator=0
+SubpartFirstId=65
+NetFmtName=Spice
+SpiceForceRefPrefix=0
+SpiceUseNetNumbers=0
+LabSize=60

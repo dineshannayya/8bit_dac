@@ -1,13 +1,9 @@
 * d:\vlsi\github\8bit_dac\schematics\2bit_dac\2bit_dac.cir
 
-r4  net-_r3-pad2_ /vrefl resistor
-r3  net-_r2-pad2_ net-_r3-pad2_ resistor
-r2  net-_r1-pad2_ net-_r2-pad2_ resistor
+* u1  /vdd /d0 /d1 /vrefh /vout net-_s1-pad7_ /vrefl port
 r1  /vrefh net-_r1-pad2_ resistor
-* u1  /vrefh /vrefl /d0 /vrefh /d1 /vout port
-s2  /vrefh /d0 net-_r3-pad2_ /vrefl net-_s2-pad5_ switch
-s1  /vrefh /d0 net-_r1-pad2_ net-_r2-pad2_ net-_s1-pad5_ switch
-s3  /vrefh /d1 net-_s1-pad5_ net-_s2-pad5_ /vout switch
+s1  /vdd /d0 /vrefl net-_r1-pad2_ net-_s1-pad5_ net-_s1-pad6_ net-_s1-pad7_ switch_2n
+s2  /vdd /d1 net-_s1-pad6_ net-_s1-pad5_ /vout switch
 .tran 0e-00 0e-00 0e-00
 
 * Control Statements 

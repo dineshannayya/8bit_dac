@@ -37,6 +37,7 @@ LIBS:eSim_Sources
 LIBS:eSim_Subckt
 LIBS:eSim_Nghdl
 LIBS:eSim_Ngveri
+LIBS:switch-cache
 EELAYER 25 0
 EELAYER END
 $Descr A4 11693 8268
@@ -384,5 +385,21 @@ Wire Wire Line
 	6200 5000 6050 5000
 Connection ~ 6200 5000
 Text Label 2900 3300 0    60   ~ 0
-digital_input
+Dx
+$Comp
+L PORT U1
+U 6 1 644B99EE
+P 7900 4150
+F 0 "U1" H 7950 4250 30  0000 C CNN
+F 1 "PORT" H 7900 4150 30  0000 C CNN
+F 2 "" H 7900 4150 60  0000 C CNN
+F 3 "" H 7900 4150 60  0000 C CNN
+	6    7900 4150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	7650 4150 7550 4150
+Connection ~ 7550 4150
+Text Label 7100 3300 0    60   ~ 0
+Dx_buf
 $EndSCHEMATC

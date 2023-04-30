@@ -1,0 +1,322 @@
+EESchema Schematic File Version 2
+LIBS:adc-dac
+LIBS:memory
+LIBS:xilinx
+LIBS:microcontrollers
+LIBS:dsp
+LIBS:microchip
+LIBS:analog_switches
+LIBS:motorola
+LIBS:texas
+LIBS:intel
+LIBS:audio
+LIBS:interface
+LIBS:digital-audio
+LIBS:philips
+LIBS:display
+LIBS:cypress
+LIBS:siliconi
+LIBS:opto
+LIBS:atmel
+LIBS:contrib
+LIBS:power
+LIBS:eSim_Plot
+LIBS:transistors
+LIBS:conn
+LIBS:eSim_User
+LIBS:regul
+LIBS:74xx
+LIBS:cmos4000
+LIBS:eSim_Analog
+LIBS:eSim_Devices
+LIBS:eSim_Digital
+LIBS:eSim_Hybrid
+LIBS:eSim_Miscellaneous
+LIBS:eSim_Power
+LIBS:eSim_Sources
+LIBS:eSim_Subckt
+LIBS:eSim_Nghdl
+LIBS:eSim_Ngveri
+LIBS:eSim_SKY130
+LIBS:eSim_SKY130_Subckts
+LIBS:4bit_DAC-cache
+EELAYER 25 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L 3bit_DAC U?
+U 1 1 644BB833
+P 3750 5050
+F 0 "U?" H 3800 5050 60  0000 C CNN
+F 1 "3bit_DAC" H 3800 5050 60  0000 C CNN
+F 2 "" H 3800 5050 60  0001 C CNN
+F 3 "" H 3800 5050 60  0001 C CNN
+	1    3750 5050
+	1    0    0    -1  
+$EndComp
+$Comp
+L 3bit_DAC U?
+U 1 1 644BB8A2
+P 3750 2300
+F 0 "U?" H 3800 2300 60  0000 C CNN
+F 1 "3bit_DAC" H 3800 2300 60  0000 C CNN
+F 2 "" H 3800 2300 60  0001 C CNN
+F 3 "" H 3800 2300 60  0001 C CNN
+	1    3750 2300
+	1    0    0    -1  
+$EndComp
+$Comp
+L switch S1
+U 1 1 644BB8FB
+P 7250 3950
+F 0 "S1" H 6900 3650 60  0000 C CNN
+F 1 "switch" H 7500 3650 60  0000 C CNN
+F 2 "" H 7250 3950 60  0001 C CNN
+F 3 "" H 7250 3950 60  0001 C CNN
+	1    7250 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U?
+U 1 1 644BBCB6
+P 6050 750
+F 0 "U?" H 6100 850 30  0000 C CNN
+F 1 "PORT" H 6050 750 30  0000 C CNN
+F 2 "" H 6050 750 60  0000 C CNN
+F 3 "" H 6050 750 60  0000 C CNN
+	1    6050 750 
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U?
+U 2 1 644BBD37
+P 3650 1050
+F 0 "U?" H 3700 1150 30  0000 C CNN
+F 1 "PORT" H 3650 1050 30  0000 C CNN
+F 2 "" H 3650 1050 60  0000 C CNN
+F 3 "" H 3650 1050 60  0000 C CNN
+	2    3650 1050
+	0    1    1    0   
+$EndComp
+$Comp
+L PORT U?
+U 3 1 644BBF8B
+P 3650 6450
+F 0 "U?" H 3700 6550 30  0000 C CNN
+F 1 "PORT" H 3650 6450 30  0000 C CNN
+F 2 "" H 3650 6450 60  0000 C CNN
+F 3 "" H 3650 6450 60  0000 C CNN
+	3    3650 6450
+	0    -1   -1   0   
+$EndComp
+$Comp
+L PORT U?
+U 4 1 644BC00A
+P 2100 4750
+F 0 "U?" H 2150 4850 30  0000 C CNN
+F 1 "PORT" H 2100 4750 30  0000 C CNN
+F 2 "" H 2100 4750 60  0000 C CNN
+F 3 "" H 2100 4750 60  0000 C CNN
+	4    2100 4750
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U?
+U 5 1 644BC081
+P 2100 5000
+F 0 "U?" H 2150 5100 30  0000 C CNN
+F 1 "PORT" H 2100 5000 30  0000 C CNN
+F 2 "" H 2100 5000 60  0000 C CNN
+F 3 "" H 2100 5000 60  0000 C CNN
+	5    2100 5000
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U?
+U 6 1 644BC0E4
+P 2100 5300
+F 0 "U?" H 2150 5400 30  0000 C CNN
+F 1 "PORT" H 2100 5300 30  0000 C CNN
+F 2 "" H 2100 5300 60  0000 C CNN
+F 3 "" H 2100 5300 60  0000 C CNN
+	6    2100 5300
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U?
+U 7 1 644BC13D
+P 6150 3900
+F 0 "U?" H 6200 4000 30  0000 C CNN
+F 1 "PORT" H 6150 3900 30  0000 C CNN
+F 2 "" H 6150 3900 60  0000 C CNN
+F 3 "" H 6150 3900 60  0000 C CNN
+	7    6150 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L PORT U?
+U 8 1 644BC19C
+P 8350 3950
+F 0 "U?" H 8400 4050 30  0000 C CNN
+F 1 "PORT" H 8350 3950 30  0000 C CNN
+F 2 "" H 8350 3950 60  0000 C CNN
+F 3 "" H 8350 3950 60  0000 C CNN
+	8    8350 3950
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U?
+U 9 1 644BC1F4
+P 5500 2500
+F 0 "U?" H 5550 2600 30  0000 C CNN
+F 1 "PORT" H 5500 2500 30  0000 C CNN
+F 2 "" H 5500 2500 60  0000 C CNN
+F 3 "" H 5500 2500 60  0000 C CNN
+	9    5500 2500
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U?
+U 10 1 644BC28D
+P 5500 2650
+F 0 "U?" H 5550 2750 30  0000 C CNN
+F 1 "PORT" H 5500 2650 30  0000 C CNN
+F 2 "" H 5500 2650 60  0000 C CNN
+F 3 "" H 5500 2650 60  0000 C CNN
+	10   5500 2650
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U?
+U 11 1 644BC2D0
+P 5500 2800
+F 0 "U?" H 5550 2900 30  0000 C CNN
+F 1 "PORT" H 5500 2800 30  0000 C CNN
+F 2 "" H 5500 2800 60  0000 C CNN
+F 3 "" H 5500 2800 60  0000 C CNN
+	11   5500 2800
+	-1   0    0    1   
+$EndComp
+$Comp
+L PORT U?
+U 12 1 644BC319
+P 8350 4100
+F 0 "U?" H 8400 4200 30  0000 C CNN
+F 1 "PORT" H 8350 4100 30  0000 C CNN
+F 2 "" H 8350 4100 60  0000 C CNN
+F 3 "" H 8350 4100 60  0000 C CNN
+	12   8350 4100
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	5400 3800 5400 5400
+Wire Wire Line
+	2000 3800 5400 3800
+Wire Wire Line
+	2000 2250 2000 3800
+Wire Wire Line
+	5250 5250 5250 4000
+Wire Wire Line
+	5250 4000 1850 4000
+Wire Wire Line
+	1850 4000 1850 2000
+Wire Wire Line
+	1850 2000 2600 2000
+Wire Wire Line
+	2000 2250 2600 2250
+Wire Wire Line
+	5600 5550 5600 3650
+Wire Wire Line
+	5600 3650 2250 3650
+Wire Wire Line
+	2250 3650 2250 2550
+Wire Wire Line
+	2250 2550 2600 2550
+Wire Wire Line
+	3650 3300 3650 4200
+Wire Wire Line
+	4950 5250 5250 5250
+Wire Wire Line
+	5400 5400 4950 5400
+Wire Wire Line
+	4950 5550 5600 5550
+Wire Wire Line
+	4550 4200 4550 3300
+Wire Wire Line
+	7400 1200 7400 3400
+Wire Wire Line
+	4950 4950 7200 4950
+Wire Wire Line
+	7200 4950 7200 4400
+Wire Wire Line
+	4950 2200 7200 2200
+Wire Wire Line
+	7200 2200 7200 3400
+Wire Wire Line
+	4550 1450 4550 1200
+Wire Wire Line
+	4550 1200 7400 1200
+Wire Wire Line
+	4550 3300 7400 3300
+Connection ~ 7400 3300
+Wire Wire Line
+	6050 1000 6050 1200
+Connection ~ 6050 1200
+Wire Wire Line
+	3650 1300 3650 1450
+Wire Wire Line
+	2350 4750 2600 4750
+Wire Wire Line
+	2350 5000 2600 5000
+Wire Wire Line
+	2350 5300 2600 5300
+Wire Wire Line
+	6400 3900 6650 3900
+Wire Wire Line
+	7800 3950 8100 3950
+Wire Wire Line
+	7800 4100 8100 4100
+Wire Wire Line
+	4950 2500 5250 2500
+Wire Wire Line
+	4950 2650 5250 2650
+Wire Wire Line
+	4950 2800 5250 2800
+Wire Wire Line
+	3650 6200 3650 6050
+Text Label 5750 1200 0    60   ~ 0
+vdd
+Text Label 3650 1500 1    60   ~ 0
+vrefh
+Text Label 3650 6200 1    60   ~ 0
+vrefl
+Text Label 2400 4750 0    60   ~ 0
+d0
+Text Label 2400 5000 0    60   ~ 0
+d1
+Text Label 2400 5300 0    60   ~ 0
+d2
+Text Label 6450 3900 0    60   ~ 0
+d3
+Text Label 7850 3950 0    60   ~ 0
+vout
+Text Label 7800 4100 0    60   ~ 0
+d3_buf
+Text Label 4950 2500 0    60   ~ 0
+d0_buf
+Text Label 4950 2650 0    60   ~ 0
+d1_buf
+Text Label 4950 2800 0    60   ~ 0
+d2_buf
+$EndSCHEMATC
