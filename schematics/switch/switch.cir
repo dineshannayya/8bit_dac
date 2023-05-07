@@ -1,19 +1,19 @@
 * /home/dinesha/workarea/opencore/git/8bit_dac/schematics/switch/switch.cir
 
-* EESchema Netlist Version 1.1 (Spice format) creation date: Sun 16 Apr 2023 04:40:52 PM IST
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sun 30 Apr 2023 10:12:30 PM IST
 
 * To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
 * To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
 
 * Sheet Name: /
-M3  Net-_M3-Pad1_ Net-_M1-Pad1_ /vdd /vdd mosfet_p		
-M4  Net-_M3-Pad1_ Net-_M1-Pad1_ GND GND mosfet_n		
-M1  Net-_M1-Pad1_ /digital_input /vdd /vdd mosfet_p		
-M2  Net-_M1-Pad1_ /digital_input GND GND mosfet_n		
+M3  /Dx_buf Net-_M1-Pad1_ /vdd /vdd mosfet_p		
+M4  /Dx_buf Net-_M1-Pad1_ GND GND mosfet_n		
+M1  Net-_M1-Pad1_ /Dx /vdd /vdd mosfet_p		
+M2  Net-_M1-Pad1_ /Dx GND GND mosfet_n		
 M6  /Vout Net-_M1-Pad1_ /vin_2 GND mosfet_n		
 M5  /Vout Net-_M1-Pad1_ /vin_1 /vdd mosfet_p		
-M7  /vin_1 Net-_M3-Pad1_ /Vout GND mosfet_n		
-M8  /vin_2 Net-_M3-Pad1_ /Vout /vdd mosfet_p		
-U1  /vdd /digital_input /vin_1 /vin_2 /Vout PORT		
+M7  /vin_1 /Dx_buf /Vout GND mosfet_n		
+M8  /vin_2 /Dx_buf /Vout /vdd mosfet_p		
+U1  /vdd /Dx /vin_1 /vin_2 /Vout /Dx_buf PORT		
 
 .end

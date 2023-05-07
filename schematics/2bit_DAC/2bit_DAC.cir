@@ -1,14 +1,14 @@
-* D:\vlsi\github\8bit_dac\schematics\2bit_DAC\2bit_DAC.cir
+* /home/dinesha/workarea/opencore/git/8bit_dac/schematics/2bit_DAC/2bit_DAC.cir
 
-* EESchema Netlist Version 1.1 (Spice format) creation date: 04/22/23 17:30:54
+* EESchema Netlist Version 1.1 (Spice format) creation date: Sun 30 Apr 2023 10:34:46 PM IST
 
 * To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
 * To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0
 
 * Sheet Name: /
-U1  /vdd /d0 /d1 /vrefh /vout Net-_S1-Pad7_ /vrefl PORT		
+U1  /vdd /vrefh /vrefl /d0 /d1 /vout /Dx_buf /d1_buf PORT		
 R1  /vrefh Net-_R1-Pad2_ resistor		
-S1  /vdd /d0 /vrefl Net-_R1-Pad2_ Net-_S1-Pad5_ Net-_S1-Pad6_ Net-_S1-Pad7_ switch_2n		
-S2  /vdd /d1 Net-_S1-Pad6_ Net-_S1-Pad5_ /vout switch		
+S1  /vdd Net-_R1-Pad2_ /vrefl /d0 Net-_S1-Pad5_ Net-_S1-Pad6_ /Dx_buf switch_2n		
+S2  /vdd Net-_S1-Pad5_ Net-_S1-Pad6_ /d1 /vout /d1_buf switch		
 
 .end
