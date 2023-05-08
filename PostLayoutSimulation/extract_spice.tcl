@@ -1,5 +1,6 @@
 
 set ::env(DESIGN_GDS) {dac_top.gds}
+#set ::env(DESIGN_GDS) {test.gds}
 #set ::env(DESIGN_NAME) {8bit_DAC}
 set ::env(DESIGN_NAME) {2x8bit_DAC}
 

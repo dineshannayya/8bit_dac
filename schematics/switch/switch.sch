@@ -74,8 +74,6 @@ F 3 "" H 5400 3250 60  0000 C CNN
 	1    5300 3450
 	1    0    0    -1  
 $EndComp
-Entry Wire Line
-	5300 3450 5400 3550
 $Comp
 L GND #PWR01
 U 1 1 643BC4DB
