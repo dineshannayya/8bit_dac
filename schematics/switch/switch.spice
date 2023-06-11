@@ -21,7 +21,8 @@ Vd0 digital_input 0 pulse (0 1.8 0s 0s 0s 5us 10us)
 .control
 run
 
-plot V(vin_1) V(vin_2) V(digital_input) V(Vout)
+* plot V(vin_1) V(vin_2) V(digital_input) V(Vout)
+plot V(digital_input) V(Vout)
 
 .endc
 

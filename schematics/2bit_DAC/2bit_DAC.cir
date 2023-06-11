@@ -1,6 +1,6 @@
 * /home/dinesha/workarea/opencore/git/8bit_dac/schematics/2bit_DAC/2bit_DAC.cir
 
-* EESchema Netlist Version 1.1 (Spice format) creation date: Sun 30 Apr 2023 10:34:46 PM IST
+* EESchema Netlist Version 1.1 (Spice format) creation date: Mon 08 May 2023 07:23:26 PM IST
 
 * To exclude a component from the Spice Netlist add [Spice_Netlist_Enabled] user FIELD set to: N
 * To reorder the component spice node sequence add [Spice_Node_Sequence] user FIELD and define sequence: 2,1,0

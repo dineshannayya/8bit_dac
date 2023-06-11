@@ -38,8 +38,8 @@ set ::env(SYNTH_READ_BLACKBOX_LIB) 1
 
 set ::env(LEC_ENABLE) 0
 
-set ::env(VDD_PIN) [list {vccd1}]
-set ::env(GND_PIN) [list {vssd1}]
+set ::env(VDD_PIN) [list {vdda1}]
+set ::env(GND_PIN) [list {vssa1}]
 
 
 # Floorplanning
@@ -90,6 +90,10 @@ set ::env(PL_RESIZER_BUFFER_INPUT_PORTS) "0"
 set ::env(PL_RESIZER_BUFFER_OUTPUT_PORTS) "0"
 set ::env(GLB_RESIZER_TIMING_OPTIMIZATIONS) "0"
 set ::env(PL_RESIZER_DESIGN_OPTIMIZATIONS) "0"
+set ::env(DIODE_INSERTION_STRATEGY) 1
+set ::env(CLOCK_TREE_SYNTH) 1
+set ::env(RUN_FILL_INSERTION) 1
+set ::env(RUN_TAP_DECAP_INSERTION) 1
 set ::env(QUIT_ON_TIMING_VIOLATIONS) "0"
 set ::env(QUIT_ON_MAGIC_DRC) "1"
 set ::env(QUIT_ON_LVS_ERROR) "1"
